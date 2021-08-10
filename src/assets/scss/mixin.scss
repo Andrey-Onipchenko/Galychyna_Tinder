@@ -1,0 +1,30 @@
+@mixin flex($jc: flex-start, $ai: flex-start) {
+  display: flex;
+  justify-content: $jc;
+  @if $ai {
+    align-items: $ai;
+  }
+}
+
+@mixin notebook {
+  @media (max-width: (1366px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: (1023px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: (767px)) {
+    @content;
+  }
+}
+@mixin min-mobile {
+  @media (max-width: (360px)) {
+    @content;
+  }
+}
